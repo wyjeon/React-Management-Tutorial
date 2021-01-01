@@ -35,8 +35,8 @@ class App extends Component {
   componentDidMount() {
     this.timer = setInterval(this.progress, 20);
     this.callApi()
-    .then(res => this.setState({customers: res}))
-    .catch(err => console.log(err));
+      .then(res => this.setState({customers: res}))
+      .catch(err => console.log(err));
   }
 
   callApi = async () => {
@@ -47,7 +47,7 @@ class App extends Component {
 
   progress = () => {
     const { completed } = this.state;
-    this.setState({ completed: completed >= 100 ? 0 : completed + 1 });
+    this.setState({ completed: completed >= 100 ? 0 : completed + 1});
   }
 
   render() {
